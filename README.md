@@ -2,13 +2,41 @@
 
 # Soc Ops
 
-Social Bingo game for in-person mixers. Find people who match the questions and get 5 in a row!
+> A fast, fun social bingo game for in-person mixers — built with Blazor and designed for learning AI-assisted development.
 
-🎮 **[Play the Game](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/)** • 📚 **[View Lab Guide](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/docs/)**
+🎮 **[Play the Game](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/)**  
+📚 **[Start the Lab Guide](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/docs/)**
+
+## Why this project?
+
+Soc Ops helps groups break the ice in minutes:
+- 🧩 Fill your board by finding people who match each prompt
+- ⚡ Get immediate bingo detection (rows, columns, diagonals)
+- 💾 Resume where you left off with local storage persistence
+- 🧪 Explore a real workshop repo focused on prompt engineering + agent workflows
 
 ---
 
-## 📚 Lab Guide
+## 🚀 Quick Start
+
+### Prerequisites
+- [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) or higher
+
+### Run locally
+```bash
+dotnet run --project SocOps/SocOps.csproj
+```
+
+### Build
+```bash
+dotnet build SocOps/SocOps.csproj
+```
+
+> Deploys automatically to GitHub Pages on push to `main`.
+
+---
+
+## 🧭 Workshop path
 
 | Part | Title |
 |------|-------|
@@ -22,11 +50,16 @@ Social Bingo game for in-person mixers. Find people who match the questions and 
 
 ---
 
-## Prerequisites
+## 🏗️ Project structure
 
-- [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) or higher
+- `SocOps/Pages/Home.razor` — top-level page flow (start/game states)  
+- `SocOps/Components/` — reusable UI components  
+- `SocOps/Services/BingoGameService.cs` — game state orchestration + persistence  
+- `SocOps/Services/BingoLogicService.cs` — pure bingo rules and board logic
 
-## Open in GitHub Codespaces (optional)
+---
+
+## ☁️ Open in GitHub Codespaces (optional)
 
 After creating your own repo from this template:
 
@@ -35,22 +68,5 @@ After creating your own repo from this template:
 3. Wait for the devcontainer to finish setup
 4. From the repository root, run:
    ```bash
-   cd SocOps
-   dotnet run
+   dotnet run --project SocOps/SocOps.csproj
    ```
-
-## Run
-
-```bash
-cd SocOps
-dotnet run
-```
-
-## Build
-
-```bash
-cd SocOps
-dotnet build
-```
-
-Deploys automatically to GitHub Pages on push to `main`.
